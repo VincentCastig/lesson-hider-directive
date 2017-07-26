@@ -38,7 +38,7 @@ angular.module('directivePractice')
 ```
 
 Looking pretty familiar, right? So let's test it and make sure it works! Start out by creating a new file named `lessonHider.html` and adding some text. Once
-you have that done we can add a property called `templateUrl: ` to our directive's return object. Point the templateUrl to your newly created
+you have that done we can add a property called `templateUrl: ` to our directive's return object. Point the templateUrl to your newly created.
 `lessonHider.html`. Now all we need to do is add the directive to our `index.html` to see if it works. Remember that directives are converted to snake-case in
 html!
 
@@ -267,6 +267,7 @@ angular.module('directivePractice')
         scope.schedule = response.data;
 
         scope.schedule.forEach(function( scheduleDay ) {
+          console.log(scheduleDay)
           if (scheduleDay.lesson === scope.lesson) {
             element.css('text-decoration', 'line-through');
             return;
@@ -329,4 +330,3 @@ prohibited. Excerpts and links may be used, provided that full and clear credit 
 content.
 
 <img src="https://devmounta.in/img/logowhiteblue.png" width="250">
-
